@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test-TC-001": "cypress run --spec cypress/e2e/cypressCloudTC-001.cy.js ",
-    "test-TC-002": "cypress run --spec cypress/e2e/cypressCloudTC-001.cy.js "
+    "test-TC-001": "cypress run --record --spec cypress/e2e/cypressCloudTC-001.cy.js ",
+    "test-TC-002": "cypress run --record --spec cypress/e2e/cypressCloudTC-001.cy.js "
   },
   "author": "Kailash Pathak",
   "license": "ISC",
