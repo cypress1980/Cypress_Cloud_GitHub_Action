@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 describe("UI QAAutomationLabs.com", { testIsolation: false }, () => {
-    it("Open URL", () => {
+    it("Open the URL", () => {
       cy.visit("https://qaautomationlabs.com/");
     });
     it("Verify Particular Blog ", () => {
