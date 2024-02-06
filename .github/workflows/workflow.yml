@@ -1,7 +1,7 @@
 name: Execute Test Case In Parallel In Separate Job
 on: [push]
 jobs:
- TC-001:
+  TC-001:
     timeout-minutes: 120
     runs-on: ubuntu-latest
     steps:
@@ -14,7 +14,7 @@ jobs:
           browser: chrome
           headless: true
           record: false
-TC-002:
+  TC-002:
     timeout-minutes: 120
     runs-on: windows-latest
     steps:
