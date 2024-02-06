@@ -1,15 +1,33 @@
-describe("Cypress Cloud Demo", () => {
-  it("Cypress Cloud Demo -03 : Login ,Add Product Into the Cart,Remove and Logoutfrom the Site", function () {
-    cy.visit("https://www.saucedemo.com/");
-    cy.get('[data-test="username"]').clear("standard_user");
-    cy.get('[data-test="username"]').type("standard_user");
-    cy.get('[data-test="password"]').clear("secret_sauce");
-    cy.get('[data-test="password"]').type("secret_sauce");
-    cy.get('[data-test="login-button"]').click();
-    cy.get('[data-test="add-to-cart-sauce-labs-backpack"]').click();
-    cy.get(".shopping_cart_link").click();
-    cy.get('[data-test="remove-sauce-labs-backpack"]').click();
-    cy.get("#react-burger-menu-btn").click();
-    cy.get("#logout_sidebar_link").click();
+describe("API QAAutomationLabs.com", { testIsolation: false }, () => {
+  it("GET API testing Using Cypress API Plugin", () => {
+    cy.request("GET", "https://reqres.in/api/users?page=2").should(
+      (response) => {
+        expect(response.status).to.eq(200);
+      }
+    );
+  });
+
+  it("POST API testing Using Cypress API Plugin", () => {
+    cy.request("POST", "https://reqres.in/api/users", {
+      name: "morpheus",
+      job: "leader",
+    }).should((response) => {
+      expect(response.status).to.eq(201);
+    });
+  });
+
+  it("PUT API testing Using Flip Plugin", () => {
+    cy.request("PUT", "https://reqres.in/api/users/2", {
+      name: "morpheus",
+      job: "zion resident",
+    }).should((response) => {
+      expect(response.status).to.eq(200);
+    });
+  });
+
+  it("DELETE API testing Using Cypress API Plugin", () => {
+    cy.request("DELETE", "https://reqres.in/api/users/2").should((response) => {
+      expect(response.status).to.eq(204);
+    });
   });
 });
