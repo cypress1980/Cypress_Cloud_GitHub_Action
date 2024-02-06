@@ -1,23 +1,17 @@
 /// <reference types="cypress" />
-context("Browser is already open ", () => {
-  it("User Open the Url", () => {
-  cy.visit(
-  "https://ecommerce-playground.lambdatest.io/index.php?route=account/login"
-  );
+describe("UI QAAutomationLabs.com", { testIsolation: false }, () => {
+    it("Open URL", () => {
+      cy.visit("https://qaautomationlabs.com/");
+    });
+    it("Click on Read More ", () => {
+      cy.get(".staticslider-button").click();
+    });
+    it("Verify Particular Blog ", () => {
+      cy.contains(
+        "Running End-to-End Cypress Test cases in a Google Cloud Pipeline"
+      );
+    });
+    it("Click on Blogs", () => {
+      cy.contains("Blog").scrollIntoView().click({ force: true });
+    });
   });
-  it("Login into the application", () => {
-  cy.get('[id="input-email"]').type("lambdatest@yopmail.com");
-  cy.get('[id="input-password"]').type("lambdatest");
-  cy.get('[type="submit"]').eq(0).click();
-  });
-  it("Click On All Categories drop down and Search the Product", () => {
-  cy.get('[data-toggle="dropdown"]').eq(0).click();
-  cy.contains("Laptops").click({ force: true });
-  cy.get('[name="search"]').eq(0).type("Apple").should("have.value", "Apple");
-  cy.get('[type="submit"]').eq(0).click();
-  });
-  it("Verify Correct Product with name'iPod Shuffle' should display after Search ", () => {
-  cy.contains("iPod Shuffle");
-  });
-  });
-  
