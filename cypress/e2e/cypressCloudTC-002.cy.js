@@ -1,5 +1,5 @@
 describe("Cypress Cloud Demo", () => {
-  it("Cypress Cloud Demo -01 : Login ,Add Product Into the Cart,Remove and Logoutfrom the Site", function () {
+  it("Cypress Cloud Demo -02 : Login ,Add Product Into the Cart,Remove and Logoutfrom the Site", function () {
     cy.visit("https://www.saucedemo.com/");
     cy.get('[data-test="username"]').clear("standard_user");
     cy.get('[data-test="username"]').type("standard_user");
