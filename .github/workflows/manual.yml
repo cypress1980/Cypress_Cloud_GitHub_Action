@@ -29,8 +29,8 @@ jobs:
           headless: true
           record: false
           parallel: true
-        env:
-          # pass the Cypress Cloud record key as an environment variable
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
-          # pass the GitHub token lets this action correctly
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+env:
+  # pass the Cypress Cloud record key as an environment variable
+  CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+  # pass the GitHub token lets this action correctly
+  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
