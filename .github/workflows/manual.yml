@@ -13,7 +13,12 @@ jobs:
           command: npm run test-TC-001
           browser: chrome
           headless: true
-          record: false
+         record: true
+        env:
+          # pass the Cypress Cloud record key as an environment variable
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          # pass the GitHub token lets this action correctly
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} 
   TestCase-002:
     timeout-minutes: 120
     runs-on: windows-latest
@@ -26,7 +31,7 @@ jobs:
           command: npm run test-TC-002
           browser: chrome
           headless: true
-          record: false
+          record: true
         env:
           # pass the Cypress Cloud record key as an environment variable
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
