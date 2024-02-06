@@ -1,0 +1,29 @@
+name: Execute Test Case In Parallel In Separate Job
+on: [push]
+jobs:
+ TC-001:
+    timeout-minutes: 120
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test Case -001
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run test-TC-001
+          browser: chrome
+          headless: true
+          record: false
+TC-002:
+    timeout-minutes: 120
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Test Case -002
+        uses: cypress-io/github-action@v2
+        with:
+          command: npm run test-TC-002
+          browser: chrome
+          headless: true
+          record: false
