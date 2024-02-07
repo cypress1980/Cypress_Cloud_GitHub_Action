@@ -8,7 +8,7 @@ describe("UI QAAutomationLabs.com", { testIsolation: false }, () => {
         "Running End-to-End Cypress Test cases in a Google Cloud Pipeline"
       );
     });
-    it("Click on Blog", () => {
+    it("Click on Blogs", () => {
       cy.contains("Blog").scrollIntoView().click({ force: true });
     });
   });
