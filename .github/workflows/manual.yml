@@ -19,7 +19,7 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           record: true
-          parallel: true
+          parallel: false
           group: 'QAAutomationLabs'
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
