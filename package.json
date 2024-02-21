@@ -5,11 +5,13 @@
   "main": "index.js",
   "scripts": {
     "test-TC-001": "cypress run --record --spec cypress/e2e/cypressCloudTC-001.cy.js ",
-    "test-TC-002": "cypress run --record --spec cypress/e2e/cypressCloudTC-002.cy.js "
+    "test-TC-002": "cypress run --record --spec cypress/e2e/cypressCloudTC-002.cy.js ",
+    "test-TC-003": "cypress run --record --spec cypress/e2e/cypressCloudTC-003.cy.js ",
+    "test-TC-004": "cypress run --record --spec cypress/e2e/cypressCloudTC-004.cy.js "
   },
   "author": "Kailash Pathak",
   "license": "ISC",
   "devDependencies": {
-    "cypress": "^13.6.3"
+    "cypress": "^13.6.5"
   }
 }
